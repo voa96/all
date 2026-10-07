@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Видеоаналитика безопасности</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <div>
+                <h1>Видеоаналитика <span>безопасности</span></h1>
+                <div class="subtitle">Детекция вооружённых людей + счётчик прохожих</div>
+            </div>
+            <div class="badge">Система активна</div>
+            <a href="index2.html">вторая страница</a>
+        </header>
+
+        
+        <h2 class="section-title">
+            Последние события
+            <span class="count" id="eventsCount">0</span>
+        </h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Время</th>
+                        <th>Камера</th>
+                        <th>Вооружённых</th>
+                        <th>Всего людей</th>
+                        <th>Риск</th>
+                    </tr>
+                </thead>
+                <tbody id="eventsTable"></tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title">
+            Камеры
+            <span class="count" id="camerasCount">0</span>
+        </h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Местоположение</th>
+                        <th>Статус</th>
+                    </tr>
+                </thead>
+                <tbody id="camerasTable"></tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>

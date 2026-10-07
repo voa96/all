@@ -1,0 +1,216 @@
+/* ===== ОБЩИЕ СТИЛИ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    color: #1a1a2e;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    padding: 40px 50px;
+    border-radius: 24px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.header h1 span {
+    color: #e94560;
+}
+
+.header .subtitle {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-top: 6px;
+}
+
+.header .badge {
+    background: #e94560;
+    padding: 10px 24px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* ===== СТАТИСТИКА (карточки) ===== */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: white;
+    padding: 24px 28px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+}
+
+.stat-card .label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #888;
+    font-weight: 600;
+}
+
+.stat-card .value {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 6px;
+    color: #1a1a2e;
+}
+
+.stat-card .value.risk {
+    font-size: 28px;
+}
+
+/* ===== ЗАГОЛОВКИ СЕКЦИЙ ===== */
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 40px 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title .count {
+    background: #e94560;
+    color: white;
+    font-size: 14px;
+    padding: 2px 12px;
+    border-radius: 100px;
+}
+
+/* ===== ТАБЛИЦЫ ===== */
+.table-wrapper {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #f8f9fc;
+    text-align: left;
+    padding: 16px 20px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: #666;
+    font-weight: 600;
+}
+
+td {
+    padding: 14px 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* ===== СТАТУСЫ И РИСКИ ===== */
+.status-active {
+    color: #2ecc71;
+    font-weight: 600;
+}
+
+.status-неактивна {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.risk-низкий {
+    color: #2ecc71;
+    font-weight: 600;
+}
+
+.risk-средний {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+.risk-высокий {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 16px;
+    }
+
+    .header {
+        padding: 24px 28px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 16px 18px;
+    }
+
+    .stat-card .value {
+        font-size: 28px;
+    }
+
+    th,
+    td {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
